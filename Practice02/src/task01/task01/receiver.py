@@ -14,7 +14,7 @@ class ReceiverNode(Node):
 
 
 def main():
-    rclpy.init(args=)
+    rclpy.init()
     node = ReceiverNode()
     rclpy.spin(node)
     node.destroy_node()
