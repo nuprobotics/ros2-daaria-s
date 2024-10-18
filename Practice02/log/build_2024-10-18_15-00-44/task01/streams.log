@@ -1,0 +1,34 @@
+[1.322s] Invoking command in '/app/src/task01': PYTHONPATH=/app/build/task01/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/app/install/task01/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/task01 build --build-base /app/build/task01/build install --record /app/build/task01/install.log --single-version-externally-managed install_data
+[1.978s] running egg_info
+[1.982s] creating ../../build/task01/task01.egg-info
+[1.987s] writing ../../build/task01/task01.egg-info/PKG-INFO
+[1.997s] writing dependency_links to ../../build/task01/task01.egg-info/dependency_links.txt
+[2.004s] writing entry points to ../../build/task01/task01.egg-info/entry_points.txt
+[2.010s] writing requirements to ../../build/task01/task01.egg-info/requires.txt
+[2.014s] writing top-level names to ../../build/task01/task01.egg-info/top_level.txt
+[2.021s] writing manifest file '../../build/task01/task01.egg-info/SOURCES.txt'
+[2.049s] reading manifest file '../../build/task01/task01.egg-info/SOURCES.txt'
+[2.095s] writing manifest file '../../build/task01/task01.egg-info/SOURCES.txt'
+[2.098s] running build
+[2.099s] running build_py
+[2.104s] creating /app/build/task01/build
+[2.106s] creating /app/build/task01/build/lib
+[2.109s] creating /app/build/task01/build/lib/task01
+[2.117s] copying task01/receiver.py -> /app/build/task01/build/lib/task01
+[2.136s] copying task01/__init__.py -> /app/build/task01/build/lib/task01
+[2.149s] running install
+[2.150s] running install_lib
+[2.169s] creating /app/install/task01/lib/python3.10/site-packages/task01
+[2.184s] copying /app/build/task01/build/lib/task01/receiver.py -> /app/install/task01/lib/python3.10/site-packages/task01
+[2.215s] copying /app/build/task01/build/lib/task01/__init__.py -> /app/install/task01/lib/python3.10/site-packages/task01
+[2.243s] byte-compiling /app/install/task01/lib/python3.10/site-packages/task01/receiver.py to receiver.cpython-310.pyc
+[2.278s] byte-compiling /app/install/task01/lib/python3.10/site-packages/task01/__init__.py to __init__.cpython-310.pyc
+[2.307s] running install_data
+[2.314s] creating /app/install/task01/share/ament_index
+[2.316s] creating /app/install/task01/share/ament_index/resource_index
+[2.319s] creating /app/install/task01/share/ament_index/resource_index/packages
+[2.328s] copying resource/task01 -> /app/install/task01/share/ament_index/resource_index/packages
+[2.348s] copying package.xml -> /app/install/task01/share/task01
+[2.364s] creating /app/install/task01/share/task01/launch
+[2.367s] error: can't copy 'launch/task01.launch': doesn't exist or not a regular file
+[2.390s] Invoked command in '/app/src/task01' returned '1': PYTHONPATH=/app/build/task01/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/app/install/task01/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/task01 build --build-base /app/build/task01/build install --record /app/build/task01/install.log --single-version-externally-managed install_data
