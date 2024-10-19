@@ -3,13 +3,20 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     return LaunchDescription([
+            DeclareLaunchArgument(
+            'text',
+            default_value='Hello, ROS2!'
+        ),
         Node(
             package='task02',
             executable='publisher',
             name='publisher',
             output='screen',
             parameters=[
-                {'text': LaunchConfiguration('text')}
+                {'text': LaunchConfiguration('text')},
+                 os.path.join(
+                    FindPackageShare('task01'), 'config', 'task02.yaml'
+                )
             ],
         )
     ])
