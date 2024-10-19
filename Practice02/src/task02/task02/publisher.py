@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 from rclpy.parameter import Parameter
+import sys
 
 
 class StringPublisher(Node):
@@ -44,4 +45,4 @@ def main(args=None):
 
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv)
