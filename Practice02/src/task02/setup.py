@@ -11,6 +11,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + "/launch", ['launch/task02.launch']),
+        ('share/' + package_name + "/config", ['config/task02.yaml']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -21,7 +22,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'publisher = task02.publisher:main'
+            'sender = task02.publisher:main'
         ],
     },
 )
