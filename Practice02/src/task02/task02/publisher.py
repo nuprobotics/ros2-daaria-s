@@ -10,7 +10,8 @@ class StringPublisher(Node):
         super().__init__('string_publisher')
 
         # Load parameters from the parameter file
-        self.declare_parameter('text', 'Hello, ROS2!')
+        self.declare_parameter('topic_name', '')
+        self.declare_parameter('text', 'Hello, ROS2!!!')
 
         # Get parameters
         self.topic_name = self.get_parameter('topic_name').get_parameter_value().string_value
@@ -32,12 +33,6 @@ class StringPublisher(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = StringPublisher()
-
-    # Process command line parameters
-    if len(args) > 1:
-        node.set_parameters([
-            Parameter('text', value=args[1])
-        ])
 
     rclpy.spin(node)
     node.destroy_node()
