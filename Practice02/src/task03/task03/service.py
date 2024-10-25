@@ -17,7 +17,7 @@ class MyService(Node):
 
         self.string_to_store = ""
 
-        self.service = self.create_service(Trigger, self.service_name, self.service_cb)
+        self.service = self.create_service(Trigger, self.service_name, self.handle_service_request)
 
         if not self.client.wait_for_service(timeout_sec=1.0):
             self.string_to_store = self.default_string
@@ -26,7 +26,7 @@ class MyService(Node):
             rclpy.spin_until_future_complete(self, future)
             self.string_to_store = future.result().message
 
-    def service_cb(self, request, response):
+    def handle_service_request(self, request, response):
         response.success = True
         response.message = self.string_to_store
         return response
